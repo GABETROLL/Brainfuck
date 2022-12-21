@@ -1,0 +1,3 @@
+data = bytearray(100)
+pointer = 0
+

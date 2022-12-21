@@ -1,0 +1,42 @@
+global _start
+
+exit:
+	mov rax, 60
+	mov rdi, 0
+	syscall
+print:
+	mov rax, 1
+	mov rdi, 1
+	mov rsi, [rsp]
+	mov rdx, 1
+	syscall
+
+	ret
+input:
+	mov rax, 0
+	mov rax, 0
+	mov rsi, [rsp]
+	mov rdx, 1
+	syscall
+
+	ret
+array_init:
+	cmp ecx, 100
+	je main
+
+	push byte 0
+
+	add ecx, 1
+	jmp array_init
+reset_pointer:
+	cmp ecx, 0
+	je main
+
+	dec rsp
+	sub ecx, 1
+
+	jmp reset_pointer
+_start:
+	mov ecx, 0
+	jmp array_init
+main:
