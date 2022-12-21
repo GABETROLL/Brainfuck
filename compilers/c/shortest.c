@@ -15,7 +15,7 @@ int main(int argc, char **argv)
 		if (*(argv[1]) == 46)
 			puts("putchar(*p);");
 		if (*(argv[1]) == 44)
-			puts("getchar(p);");
+			puts("getchar();");
 		if (*(argv[1]) == 91)
 		{
 			puts("while(*p){");
