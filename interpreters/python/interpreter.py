@@ -1,7 +1,7 @@
 import argparse
 
 array = bytearray(200)
-pointer = 0
+p = 0
 
 
 def chars_until_closing_bracket(code_iter):
@@ -24,7 +24,7 @@ def chars_until_closing_bracket(code_iter):
 
 
 def interpret(code_iter):
-    global pointer
+    global p
 
     while True:
         try:
