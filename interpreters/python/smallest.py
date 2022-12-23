@@ -1,6 +1,4 @@
-c: str = input()
-d = [0] * 30
-p = 0
+c,d,p=input(),[0]*30,0
 def b(i):
     global p
     while i<len(c):
@@ -19,8 +17,8 @@ def b(i):
         if c[i]=="[":
             ni=i
             while d[p]:
-                ni = b(i + 1)
-            i = ni
+                ni = b(i+1)
+            i=ni
         elif c[i]=="]":
             return i
         i+=1
