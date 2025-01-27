@@ -1,4 +1,4 @@
-"""Converts output string into the shortest Brainfuck code."""
+"""Converts output string into the shortest Brainfuck c."""
 from math import sqrt
 
 # 'Hi' -> 72, 105
