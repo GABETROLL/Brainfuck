@@ -3,19 +3,19 @@ from compilers.python.AST import Loop
 
 def instruction(ast_item, tabs=0):
     if ast_item == "+":
-        return "    " * tabs + "data[pointer] += 1\n"
+        return "    " * tabs + "d[p] += 1\n"
     elif ast_item == "-":
-        return "    " * tabs + "data[pointer] -= 1\n"
+        return "    " * tabs + "d[p] -= 1\n"
     elif ast_item == "<":
-        return "    " * tabs + "pointer -= 1\n"
+        return "    " * tabs + "p -= 1\n"
     elif ast_item == ">":
-        return "    " * tabs + "pointer += 1\n"
+        return "    " * tabs + "p += 1\n"
     elif ast_item == ".":
-        return "    " * tabs + "print(chr(data[pointer]), end='')\n"
+        return "    " * tabs + "print(chr(d[p]), end='')\n"
     elif ast_item == ",":
-        return "    " * tabs + "data[pointer] = ord(input('>>>'))\n"
+        return "    " * tabs + "d[p] = ord(input('>>>'))\n"
     elif isinstance(ast_item, Loop):
-        result = "    " * tabs + "while data[pointer] != 0:\n"
+        result = "    " * tabs + "while d[p] != 0:\n"
 
         if not ast_item.children:
             result += "    " * (tabs + 1) + "pass"
