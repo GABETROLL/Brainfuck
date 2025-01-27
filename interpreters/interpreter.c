@@ -32,7 +32,7 @@ char *parse(char **data, char *code)
 int main(int argc, char *argv[])
 {
 	char data[300];
-	char code[];
+	char *code = argv[1];
 
 	if (*parse(&data, code)) {return (1);}
 
